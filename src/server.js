@@ -149,17 +149,8 @@ if (!NETLIFY) app.post("/filter/verdict", async (req, res) => {
 
 // if (vendorMap?.analytics) mountAnalytics(app, vendorMap.analytics);
 
-if (!vendorMap) {
-  try {
-    const info = await resolveVersionInfo();
-    const settingsHtml = injectVersionInfo(readFileSync(path.join(SERVE_DIR, "settings.html"), "utf8"), info).html;
-    const sendSettings = (_req, res) => res.type("html").send(settingsHtml);
-    app.get("/settings", sendSettings);
-    app.get("/settings.html", sendSettings);
-  } catch (err) {
-    console.warn(chalk.yellow(`Settings version injection skipped, serving placeholders: ${err.message}`));
-  }
-}
+app.get(["/settings", "/settings.html"], (_req, res) => res.redirect(302, "/home"));
+
 
 app.use(express.static(SERVE_DIR, { ...jsStaticOptions, dotfiles: "ignore" }));
 
@@ -181,7 +172,6 @@ const routes = [
   { path: "/apps", file: "apps.html" },
   { path: "/games", file: "games.html" },
   { path: "/play.html", file: "games.html" },
-  { path: "/settings", file: "settings.html" },
   { path: "/tabs", file: "tabs.html" },
   { path: "/home", file: "home.html" },
   { path: "/", file: "index.html" },
