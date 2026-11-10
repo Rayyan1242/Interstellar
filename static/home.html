@@ -1,13 +1,12 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="referrer" content="no-referrer" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" id="tab-favicon" href="/assets/media/favicon/thesaurus.png" />
-  <title id="page-title">Synonyms and Antonyms of Words | Thesaurus.com</title>
+  <link rel="shortcut icon" id="tab-favicon" href="/assets/media/favicon/main.png" />
+  <title id="page-title">MCPS Browser</title>
   <link rel="stylesheet" href="/assets/css/global.css" />
   <link rel="stylesheet" href="/assets/css/home.css" />
   <link rel="stylesheet" href="/assets/css/nav.css" />
@@ -15,27 +14,28 @@
   <script src="/assets/js/main.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body class="center">
   <div class="nav-bar"></div>
-  <div class="main">
-    <h1 class="title"></h1>
-    <p id="splash"></p>
+  <main class="main">
+    <div class="home-eyebrow"><span class="status-dot"></span> YOUR WEB, YOUR SPACE</div>
+    <h1 class="title">MCPS <span>Browser</span></h1>
+    <p class="home-description">A cleaner way to explore the web.</p>
     <div class="search-container">
       <form id="search-form" method="POST">
-        <input id="input" class="truncate" placeholder="Search or enter a URL" type="text" />
+        <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+        <input id="input" class="truncate" placeholder="Search or enter a URL" type="text" autocomplete="off" />
+        <span class="search-hint">↵</span>
       </form>
-      <button id="about-blank-button" type="button">Open in about:blank</button>
     </div>
-  </div>
+    <div class="home-footer"><span>MCPS BROWSER</span><span class="footer-divider"></span><span>READY WHEN YOU ARE</span></div>
+  </main>
   <script src="/assets/js/vendor.js"></script>
-  <script src="assets/js/search.js"></script>
+  <script src="/assets/js/search.js"></script>
   <script src="/assets/js/home.js"></script>
   <script src="./assets/ultraviolet/uv.bundle.js"></script>
   <script src="./assets/ultraviolet/uv.config.js"></script>
   <script src="/assets/scramjet/scramjet.all.js"></script>
   <script src="/assets/scramjet/scramjet.config.js"></script>
-<script src="/assets/js/analytics.js"></script>
+  <script src="/assets/js/analytics.js"></script>
 </body>
-
 </html>
