@@ -337,12 +337,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const LogoUrl = isPastelTheme ? "/assets/media/favicon/main.png" : isLightTheme ? "/assets/media/favicon/main-inverted.png" : "/assets/media/favicon/main.png";
     const html = `
       <div id="icon-container">
-        <a class="icon" href="/home"><img alt="nav" id="nav-logo" src="${LogoUrl}"/></a>
+        <a class="icon" href="/home"><span class="mcps-mark">M</span><span>MCPS Browser</span></a>
       </div>
       <div class="nav-bar-right">
-        <a class="navbar-link" href="/./games"><i class="fa-solid fa-gamepad navbar-icon"></i>${obfuscateNav("Games")}</a>
-        <a class="navbar-link" href="/./apps"><i class="fa-solid fa-phone navbar-icon"></i>${obfuscateNav("Apps")}</a>
-        <a class="navbar-link" href="/./settings"><i class="fa-solid fa-gear navbar-icon settings-icon"></i>${obfuscateNav("Settings")}</a>
+        <a class="navbar-link" href="/./games"><i class="fa-solid fa-gamepad navbar-icon"></i>Games</a>
+        <a class="navbar-link" href="/./apps"><i class="fa-solid fa-grid-2 navbar-icon"></i>Apps</a>
       </div>`;
     nav.innerHTML = html;
   }
